@@ -16,16 +16,16 @@
         <div class="header container">
             <div class="nav-bar">
                 <div class="brand">
-                    <a href="#hero"><h1><span>P</span>laner <span>A</span></h1></a>
+                    <a href="#hero"><h1><span>P</span>laner <span>A</span>lpha</h1></a>
                 </div>
                 <div class="nav-list">
                     <div class="hamburger"><div class="bar"></div></div>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Planer</a></li>
-                        <li><a href="#">Urlaubswunsch</a></li>
-                        <li><a href="#">Urlaub Buchen</a></li>
-                        <li><a href="#">Kontakte</a></li>
+                        <li><a href="#hero" data-after="Home">Home</a></li>
+                        <li><a href="#services" data-after="Planer">Planer</a></li>
+                        <li><a href="#urlaub" data-after="Urlaubswunsch">Urlaubswunsch</a></li>
+                        <li><a href="#anlegen" data-after="Urlaub Buchen">Buchen</a></li>
+                        <li><a href="#contact" data-after="Kontakte">Kontakte</a></li>
                     </ul>
                 </div>
             </div>
@@ -41,7 +41,7 @@
             <h1>My <span></span></h1>
             <h1>Holiday <span></span></h1>
             <h1>Planer <span></span></h1>
-            <b><a href="#" type="button" class="cta">Planer</a></b>
+            <b><a href="#services" type="button" class="cta">Planer</a></b>
         </div>
     </div>
     </section>
@@ -90,6 +90,29 @@
                 <a href="javascript:void(0);" class="cta" onclick="dialogOeffnen('anmelden-dialog')">JETZT ANMELDEN!</a>
 
             </div>
+            <table id="famtable" class="table" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Vorname</th>
+                        <th>Nachname</th>
+                        <th>Geburtstag</th>
+                        <th>Buttons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Peter</td>
+                    <td>Olaf</td>
+                    <td>01.01.2001</td>
+                    <td>
+                        <a href="javascript:void(0);" class="cta-button" onclick="loadtable">Löschen</a>
+                        <a href="javascript:void(0);" class="cta-button" onclick="updatetable">Updaten</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table> 
         </div>
     </section>
     <!-- End of family hinzufügen -->
@@ -105,11 +128,9 @@
             <div class="all-urlaub">
                 <div class="urlaub-item">
                     <div class="urlaub-info">
-                        <h1>Urlaubswunsch 1</h1>
-                        <h2>Bestes Rating für den Urlaub:</h2>
-                        <p>hier kommt unser rating system und die
-                            Daten die wir reinbekommen..........
-                        </p>
+                        <h1>Urlaubsbeispiel 1</h1>
+                        <h2>Urlaubsbeispiele zum Reisen:</h2>
+                        <p>Hier finden Sie Urlaubsbeispiele zum Reisen </p>
                     </div>
                     <div class="urlaub-img">
                         <img src="./img/urlaub-bild.jpg" alt="img">
@@ -117,55 +138,43 @@
                 </div>
                 <div class="urlaub-item">
                     <div class="urlaub-info">
-                        <h1>Urlaubswunsch 2</h1>
-                        <h2>zweitbeste Rating für den Urlaub:</h2>
-                        <p>hier kommt unser rating system und die
-                            Daten die wir reinbekommen..........
-                        </p>
+                        <h1>Türkei</h1>
+                        
                     </div>
                     <div class="urlaub-img">
-                        <img src="./img/urlaub-bild.jpg" alt="img">
+                        <img src="./img/pamukkale.jpg" alt="img">
                     </div>
                 </div>
                 <div class="urlaub-item">
                     <div class="urlaub-info">
-                        <h1>Urlaubswunsch 3</h1>
-                        <h2>drittbestes Rating für den Urlaub:</h2>
-                        <p>hier kommt unser rating system und die
-                            Daten die wir reinbekommen..........
-                        </p>
+                        <h1>Santorini</h1>
+                        
                     </div>
                     <div class="urlaub-img">
-                        <img src="./img/urlaub-bild.jpg" alt="img">
+                        <img src="./img/santorini.jpg" alt="img">
                     </div>
                 </div>
                 <div class="urlaub-item">
                     <div class="urlaub-info">
-                        <h1>Urlaubswunsch 4</h1>
-                        <h2>viertbestes Rating für den Urlaub:</h2>
-                        <p>hier kommt unser rating system und die
-                            Daten die wir reinbekommen..........
-                        </p>
+                        <h1>Bora Bora</h1>
+                        
                     </div>
                     <div class="urlaub-img">
-                        <img src="./img/urlaub-bild.jpg" alt="img">
+                        <img src="./img/borabora.jpg" alt="img">
                     </div>
                 </div>
                 <div class="urlaub-item">
                     <div class="urlaub-info">
-                        <h1>Urlaubswunsch 5</h1>
-                        <h2> letzter platz für den Urlaub:</h2>
-                        <p>hier kommt unser rating system und die
-                            Daten die wir reinbekommen..........
-                        </p>
+                        <h1>Japan</h1>
+                        
+                        
                     </div>
                     <div class="urlaub-img">
-                        <img src="./img/urlaub-bild.jpg" alt="img">
+                        <img src="./img/japan.jpg" alt="img">
                     </div>
                 </div>
             </div>
-            <div class="tabellen-urlaub">
-            <table id="videotable" class="display" cellspacing="0" width="100%">
+            <table id="urlaubtable" class="table" cellspacing="0" width="100%">   
                 <thead>
                     <tr>
                         <th>Beschreibung</th>
@@ -180,15 +189,13 @@
                     <td>Malle</td>
                     <td>1</td>
                     <td>
-                        <a href="#" class="button tabelle-cta hover-button" onclick="loadtable">Löschen</a>
-                        <a href="#" class="button tabelle-cta hover-button" onclick="loadtable">Updaten</a>
-                        <a href="#" class="button tabelle-cta hover-button" onclick="dialogOeffnen('priorität-dialog')">Priorität</a>
-                        <a href="javascript:void(0);" class="tabelle-cta" onclick="dialogOeffnen('urlaubswunsch-dialog')">URLAUBSWUNSCH ANLEGEN!</a>
+                        <a href="javascript:void(0);" class="cta-button" onclick="loadtable">Löschen</a>
+                        <a href="javascript:void(0);" class="cta-button" onclick="updatetable">Updaten</a>
+                        <a href="javascript:void(0);" class="cta-button" onclick="dialogOeffnen('priorität-dialog')">Priorität</a>
                     </td>
                 </tr>
                 </tbody>
             </table>
-        </div>
         </div>
     </section>
 
@@ -219,7 +226,7 @@
     <!-- Contact Section -->
     <section id="contact">
         <div class="contact container">
-            <div><h1 class="section-title">Contact <span>Info</span></h1></div>
+            <div><h1 class="section-title">Kontakt <span>Info</span></h1></div>
             <div class="contact-items">
                 <div class="contact-item">
                     <div class="icon"><img src="https://img.icons8.com/bubbles/50/000000/conference-call.png"/></div>
@@ -339,7 +346,7 @@
     </section>
 
     <!-- End Footer -->
-
+<script src="./app.js"></script>
     
 </body>
 </html>
