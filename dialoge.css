@@ -332,3 +332,140 @@
     color: white;
     background-color: crimson;
 }
+
+/* Update 1 */
+#update1-dialog {
+    background-color: darkgrey;
+    box-shadow: inset 0px 0px 10px black, 2px 2px 4px rgba(255, 255, 255, 0.1), 8px 8px 16px rgba(255, 255, 255, 0.1);
+    border: 5px solid silver;
+}
+
+#update1-dialog .dialog-schliessen-button {
+    color: rgba(0, 0, 0, 1);
+}
+
+#update1-dialog form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#update1-dialog h3 {
+    margin: 0;
+    color: black;
+    text-align: center;
+    font-size: max(2.5vw, 1.1em);
+    text-shadow: 0px 0px 4px black;
+}
+
+#update1-dialog input {
+    width: 100%;
+    margin: 7px 0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: inherit;
+    vertical-align: middle;
+}
+
+#update1-dialog .eingabefeld {
+    padding: 14px 16px;
+    font-size: 17px;
+    line-height: 16px;
+    background: #f5f6f7;
+    border: 2px solid silver;
+    color: #1c1e21;
+    height: 50px;
+    box-shadow: inset 0px 0px 4px #222;
+}
+
+#update1-dialog .eingabefeld:focus-visible {
+    outline: none;
+    border: 2px solid #3a342c;
+}
+
+#update1-dialog input[type=submit] {
+     display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 3px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .45s ease;
+    transition-property: background-color, color;
+}
+
+#update1-dialog input[type=submit]:hover {
+    color: white;
+    background-color: crimson;
+}
+/* Update 2 */
+#update2-dialog {
+    background-color: darkgrey;
+    box-shadow: inset 0px 0px 10px black, 2px 2px 4px rgba(255, 255, 255, 0.1), 8px 8px 16px rgba(255, 255, 255, 0.1);
+    border: 5px solid silver;
+}
+
+#update2-dialog .dialog-schliessen-button {
+    color: rgba(0, 0, 0, 1);
+}
+
+#update2-dialog form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#update2-dialog h3 {
+    margin: 0;
+    color: black;
+    text-align: center;
+    font-size: max(2.5vw, 1.1em);
+    text-shadow: 0px 0px 4px black;
+}
+
+#update2-dialog input {
+    width: 100%;
+    margin: 7px 0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: inherit;
+    vertical-align: middle;
+}
+
+#update2-dialog .eingabefeld {
+    padding: 14px 16px;
+    font-size: 17px;
+    line-height: 16px;
+    background: #f5f6f7;
+    border: 2px solid silver;
+    color: #1c1e21;
+    height: 50px;
+    box-shadow: inset 0px 0px 4px #222;
+}
+
+#update2-dialog .eingabefeld:focus-visible {
+    outline: none;
+    border: 2px solid #3a342c;
+}
+
+#update2-dialog input[type=submit] {
+     display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 3px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .45s ease;
+    transition-property: background-color, color;
+}
+
+#update2-dialog input[type=submit]:hover {
+    color: white;
+    background-color: crimson;
+}
