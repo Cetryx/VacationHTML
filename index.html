@@ -108,7 +108,7 @@
                     <td>01.01.2001</td>
                     <td>
                         <a href="javascript:void(0);" class="cta-button" onclick="loadtable">Löschen</a>
-                        <a href="javascript:void(0);" class="cta-button" onclick="updatetable">Updaten</a>
+                        <a href="javascript:void(0);" class="cta-button" onclick="dialogOeffnen('update1-dialog')">Updaten</a>
                     </td>
                 </tr>
                 </tbody>
@@ -177,6 +177,7 @@
             <table id="urlaubtable" class="table" cellspacing="0" width="100%">   
                 <thead>
                     <tr>
+                        <th>Urlaubs ID</th>
                         <th>Beschreibung</th>
                         <th>Ort</th>
                         <th>Priorität</th>
@@ -185,12 +186,13 @@
                 </thead>
                 <tbody>
                 <tr>
+                    <td>1</td>
                     <td>Malle</td>
                     <td>Malle</td>
                     <td>1</td>
                     <td>
                         <a href="javascript:void(0);" class="cta-button" onclick="loadtable">Löschen</a>
-                        <a href="javascript:void(0);" class="cta-button" onclick="updatetable">Updaten</a>
+                        <a href="javascript:void(0);" class="cta-button" onclick="dialogOeffnen('update2-dialog')">Updaten</a>
                         <a href="javascript:void(0);" class="cta-button" onclick="dialogOeffnen('priorität-dialog')">Priorität</a>
                     </td>
                 </tr>
@@ -229,14 +231,14 @@
             <div><h1 class="section-title">Kontakt <span>Info</span></h1></div>
             <div class="contact-items">
                 <div class="contact-item">
-                    <div class="icon"><img src="https://img.icons8.com/bubbles/50/000000/conference-call.png"/></div>
+                    <div class="icon"><img src="https://img.icons8.com/external-filled-color-icons-papa-vector/78/000000/external-Web-Developer-coding-filled-color-icons-papa-vector.png"/></div>
                     <div class="contact-info">
                         <h1>Developer</h1>
                         <h2>83545: Ali Cobanoglu</h2>
                         <h2>83351: Johannes Schmid</h2>
                         <h2>82878: Julian Abele</h2>
-                        <h2>83545: Ali Cobanoglu</h2>
-                        <h2>83545: Ali Cobanoglu</h2>
+                        <h2>82883: Maik Maier</h2>
+                        <h2>83546: Jonas Esswein</h2>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -244,17 +246,17 @@
                     <div class="contact-info">
                         <h1>Email</h1>
                         <h2>ali.cobanoglu@studmail.htw-aalen.de</h2>
-                        <h2>ali.cobanoglu@studmail.htw-aalen.de</h2>
-                        <h2>ali.cobanoglu@studmail.htw-aalen.de</h2>
-                        <h2>ali.cobanoglu@studmail.htw-aalen.de</h2>
-                        <h2>ali.cobanoglu@studmail.htw-aalen.de</h2>
+                        <h2>johannes.schmid@studmail.htw-aalen.de</h2>
+                        <h2>julian.abele@studmail.htw-aalen.de</h2>
+                        <h2>maik.maier@studmail.htw-aalen.de</h2>
+                        <h2>jonas.esswein@studmail.htw-aalen.de</h2>
                     </div>
                 </div>
                 <div class="contact-item">
-                    <div class="icon"><img src="https://img.icons8.com/bubbles/50/000000/conference-call.png"/></div>
+                    <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/school.png"/></div>
                     <div class="contact-info">
                         <h1>School</h1>
-                        <h2>Hs aalem</h2>
+                        <h2>Hochschule Aalen</h2>
                         <h2>Wirtschaftsinformatik</h2>
                         
                     </div>
@@ -288,6 +290,7 @@
         <h3>Jetzt Anlegen!</h3>
         <p>Bitte geben Sie alle erforderlichen Daten ein um fortzufahren!</p>
         <form action="">
+            <input type="number" name="vacationwishid" min="0" placeholder="Urlaubs ID" class="eingabefeld">
             <input type="text" name="BE" placeholder="Beschreibung" class="eingabefeld">
             <input type="text" name="ORT" placeholder="Ort" class="eingabefeld">
             <input type="submit" value="Anlegen!">
@@ -315,8 +318,35 @@
         <h3>Priorität!</h3>
         <p>Bitte geben Sie alle erforderlichen Daten ein um fortzufahren!</p>
         <form action="">
+            <input type="number" name="IDU" min="0" placeholder="FamilienID" class="eingabefeld">
+            <input type="number" name="PRIO" min="0" placeholder="Urlaubs ID" class="eingabefeld">
             <input type="number" name="PRIO" min="0" max="10" placeholder="Priorität" class="eingabefeld">
             <input type="submit" value="Abgeben!">
+        </form>        
+    </div>
+    <div class="dialog" id="update1-dialog">
+        <a href="javascript:void(0)" role="button" class="dialog-schliessen-button" onclick="dialogSchliessen('update1-dialog')">
+            <i class="icon"><img src="https://img.icons8.com/tiny-color/16/000000/experimental-delete-sign-tiny-color.png"/></i>
+        </a>
+        <h3>Update!</h3>
+        <p>Bitte geben Sie alle erforderlichen Daten ein um fortzufahren!</p>
+        <form action="">
+            <input type="text" name="VN" placeholder="Vorname" class="eingabefeld">
+            <input type="text" name="NN" placeholder="Nachname" class="eingabefeld">
+            <input type="date" name="GT" placeholder="Geburtstag" class="eingabefeld">
+            <input type="submit" value="Updaten!">
+        </form>        
+    </div>
+    <div class="dialog" id="update2-dialog">
+        <a href="javascript:void(0)" role="button" class="dialog-schliessen-button" onclick="dialogSchliessen('update2-dialog')">
+            <i class="icon"><img src="https://img.icons8.com/tiny-color/16/000000/experimental-delete-sign-tiny-color.png"/></i>
+        </a>
+        <h3>Update!</h3>
+        <p>Bitte geben Sie alle erforderlichen Daten ein um fortzufahren!</p>
+        <form action="">
+            <input type="text" name="VN" placeholder="Beschreibung" class="eingabefeld">
+            <input type="text" name="NN" placeholder="Ort" class="eingabefeld">
+            <input type="submit" value="Updaten!">
         </form>        
     </div>
     <script src="dialoge.js"></script>
@@ -341,7 +371,7 @@
                     <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/linkedin.png"/></a>
                 </div>
             </div>
-            <p>Copyright © 2020 Developers. All rights reserved</p>
+            <p>Copyright © 2022 Developers. All rights reserved</p>
         </div>
     </section>
 
